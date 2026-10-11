@@ -6,7 +6,7 @@ class ticker_data():
     def __init__(self, ticker_name):
         self.ticker_name = ticker_name
         self.set_ticker = fy.Ticker(str(self.ticker_name))
-        self.ticker_data = self.set_ticker.info()
+        self.ticker_data = self.set_ticker.history(period = "1mo")
         pass
 
     def get_current_price( self ):
